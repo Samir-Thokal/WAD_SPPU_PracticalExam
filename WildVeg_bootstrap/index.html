@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Bootstrap</title>
+    <style>
+        .highlighted {
+            border: 2px solid red;
+        }
+        .links a {
+            display: block;
+            margin-bottom: 4px;
+            text-decoration: none;
+        }
+        .img-thumbnail{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container mb-4 mt-4">
+        <div class="row">
+            <div class="sidebar col-3">
+                <h1>Some Favourites</h1>
+                <div class="links">
+                    <a href="#" onclick="highlightImage(1)">Potato</a>
+                    <a href="#" onclick="highlightImage(2)">Onion</a>
+                    <a href="#" onclick="highlightImage(3)">Tomato</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="alert alert-danger">
+                    <strong>Oh no! </strong> You are hot baby!
+                </div>
+                <h1>Wild & Wacky Vegetables</h1>
+                <div class="border-start border-4 py-1 px-3">
+                    <p>The beet is the most intense of vegetables. The radish, admittedly, is more feverish, but the fire of the radish is a cold fire, the fire of discontent not of passion, Tomatoes are lusty enough, yet there runs through tomatoes an undercurrent of frivolity. Beets are deadly serious.</p>
+                    -Tom Robbins
+                </div>
+                <h2 class="mt-4">Some Diseases</h2>
+                
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <th>Vegetable</th>
+                            <th> Disease</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Beet</td>
+                                <td>Beeturia</td>
+                            </tr>
+                            <tr>
+                                <td>Carrots</td>
+                                <td>Cattotenosis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                <p> Kale courgette salsify mustard broccoli seakale wakame potato fava bean tigernut leek celery spinach avocado cabbage celtuce rutabaga kohirabi. Parsnip pea soko groundnut bitterleaf spring onion. Grape duise rutabaga lentil gram kakadu plum water spinach cabbage lotus root.</p>
+                <p>Mung bean quandong kale prairie turnip celery gram zucchini pumpkin green bean silver beet chard endive komatsuna eggplant lakadu plum radish broccoli. Arugula amaranth fennel wakane peanut garlic chickweed. Sorrel jicama quandong kale chickpea water chestnut rock meion aubergine lettuce pea azuki bean cress onion sea lettuce dandelion nori dulse nutabaga. Coriander napa cabbage bok choy carrot kakadu plum brussels sprout bamboo shoot salad okra cucumber garlic kombu beet groens cauliflower summer purslane. Artichoke.</p>
+                <img src="./img/1.jpg" id="img1" alt="image1" class="img-thumbnail">
+                <img src="./img/2.jpg" id="img2" alt="image2" class="img-thumbnail">
+                <img src="./img/3.jpg" id="img3" alt="image3" class="img-thumbnail">
+            </div>
+        </div>
+    </main>
+    <script>
+        function highlightImage(imageNumber){
+            document.querySelectorAll('.img-thumbnail').forEach(function (el){
+                el.classList.remove('highlighted');
+            });
+            document.getElementById('img' + imageNumber).classList.add('highlighted');
+        }
+    </script>
+    
+</body>
+</html>

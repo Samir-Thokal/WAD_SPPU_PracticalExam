@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: "Courier New", monospace;
+    }
+
+    .navbar {
+      margin-left: 150px;
+      margin-right: 150px;
+      padding: 30px;
+      border-radius: 100px;
+      height: 25px;
+      margin-top: 50px;
+      background-color: #fff;
+      opacity: 0.8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      /* position: fixed; */
+      position: fixed;
+      top: 0;
+      width: 80%;
+      z-index: 1000;
+    }
+
+    .nav_links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .nav_links li {
+      list-style: none;
+      font-style: none;
+      margin-left: 30px;
+      font-weight: 600;
+    }
+
+    .nav_links li a {
+      font-style: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    .active {
+      border-bottom: 2px solid red;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    .subscribe {
+      margin-top: 200px;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form_container{
+      min-width: 50vw;
+      min-height: 50vh;
+      border-radius: 30px;
+      padding: 30px;    
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div>
+      <h1>SS</h1>
+    </div>
+    <div>
+      <ul class="nav_links">
+
+        <li > <a href="index.html">Home</a> </li>
+        <li> <a href="index.html#features">Features </a></li>
+        <li ><a href="about_us.html" >About Us</a></li>
+        <li  class="active"> <a href="subscribe.html"> Subscribe</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subscribe row">
+    <div class="form_container">
+      
+    </div>
+  </div>
+  <hr>
+
+</body>
+
+</html>

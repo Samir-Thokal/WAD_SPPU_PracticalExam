@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Input Box</title>
+    </head>
+    <style>
+        h1{
+            background-color: #e5d00f;
+            text-align: center;
+            text-decoration: solid;
+        }
+        body{
+            text-align: center;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #dc2915;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+          }
+        .table-container {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+         }
+         td {
+          border: 2px solid #ddd;
+          padding: 12px;
+          text-align: center;
+        }
+         tr:nth-child(even) {
+           background-color: #f2f2f2;
+          }
+         th {
+           background-color: #4CAF50;
+           color: white;
+         }
+    </style>
+    <body>
+        <h1>Table</h1>
+        <hr>
+        <div class="input-container">
+            <lable for="input1"><b>Input for first table(Rows#Columns)&nbsp; </b></lable>
+            <input type="text" id="input1" required>
+            <label for="input2"><b>Input for second table(Rows#Columns)&NonBreakingSpace;</b></label>
+            <input type="text" id="input2" required>
+        </div>
+        <div>
+            <button onclick="generateTables()">Generate tables</button>
+        </div>
+        <div id="tableContainer" class="table-container"></div>
+
+        <script>
+            function generateTables(){
+                const input1 = document.getElementById("input1").value;
+                const input2 = document.getElementById("input2").value;
+                const [rows1 , cols1, value1] = input1.split("#").map(Number);
+                const [rows2, cols2, value2] = input2.split("#").map(Number);
+                if(rows1 == rows2 && cols1 == cols2){
+                    const table1 = generateTable(rows1,cols1,value1);
+                    const table2 = generateTable(rows2, cols2, value2);
+                    const table3 = generateThirdTable(rows1, cols1, value1, value2);
+
+                    const tableContainer = document.getElementById("tableContainer");
+                    tableContainer.innerHTML = "";
+                    // <h1>Table 1</h1>
+                    tableContainer.appendChild(table1);
+                    tableContainer.appendChild(table2);
+                    tableContainer.appendChild(table3);
+                }
+                else{
+                    alert("Dimensions of tables are not same");
+                }
+            }
+            function generateTable(rows, cols, value){
+                const table = document.createElement("table");
+                for(let i = 0; i < rows; i++){
+                    const row = table.insertRow();
+                    for(let j = 0; j < cols; j++){
+                        const cell = row.insertCell();
+                        const num = (i + 1) * (value + j);
+                        cell.textContent = num ;
+                    }
+                }
+                return table;
+            }
+            function generateThirdTable(rows, cols, value1, value2){
+                const table = document.createElement("table");
+                for( let i = 0; i < rows; i++){
+                    const row = table.insertRow();
+                    for ( let j = 0; j < cols; j++){
+                        const cell = row.insertCell();
+                        if( (i + 1) * (value1 + j) === (i + 1) * (value2 + j) ){
+                            const num = (i + 1) * (value1 + j);
+                            cell.textContent = num;
+                        }
+                        else{
+                            const num = (i + 1) * (value1 + j) * (i + 1) * (value2 + j);
+                            cell.textContent = num;
+                        }
+                    }
+                }
+                return table;
+            }
+        </script>
+    </body>
+</html>

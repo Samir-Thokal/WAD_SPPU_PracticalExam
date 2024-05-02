@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: "Courier New", monospace;
+    }
+
+    .navbar {
+      margin-left: 150px;
+      margin-right: 150px;
+      padding: 30px;
+      border-radius: 100px;
+      height: 25px;
+      margin-top: 50px;
+      background-color: #fff;
+      opacity: 0.8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      /* position: fixed; */
+      position: fixed;
+      top: 0;
+      width: 80%;
+      z-index: 1000;
+    }
+
+    .nav_links {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .nav_links li {
+      list-style: none;
+      font-style: none;
+      margin-left: 30px;
+      font-weight: 600;
+    }
+
+    .nav_links li a {
+      font-style: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    .active {
+      border-bottom: 2px solid red;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col {
+      flex: 1;
+    }
+
+    .about_us {
+      margin: 150px;
+      margin-top: 200px;
+      min-height: 80vh;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div>
+      <h1>SS</h1>
+    </div>
+    <div>
+      <ul class="nav_links">
+        <li > <a href="index.html">Home</a> </li>
+        <li> <a href="index.html#features">Features </a></li>
+        <li  class="active"><a href="about_us.html" >About Us</a></li>
+        <li><a href="subscribe.html"> Subscribe</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="about_us row">
+    <div class="col">
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, 
+        <br/>
+        you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+      </p>
+      <hr>
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, 
+        <br/>
+        you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+      </p>
+    </div>
+    <div class="col">
+      <img src="https://somesh4545.github.io/assets/save_money.png" class="feature_img" />
+    </div>
+  </div>
+  <hr>
+
+</body>
+
+</html>
