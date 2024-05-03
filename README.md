@@ -74,3 +74,9 @@ Cat
 Nano
 ifconfig
 Scp file name vagrant@ip:/home/vagrant
+
+
+//node app.js
+//nodemon app.js
+// npm i nodemon
+// npm i path express.....
